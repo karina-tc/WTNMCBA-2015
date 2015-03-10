@@ -1,0 +1,139 @@
+  		html, body {font-family: 'Montserrat', sans-serif; font-weight: 400; font-style: normal;}
+  		html, body, #container { height: 100%; }
+  		body > #site-wrap { height: auto; min-height: 100%; }
+
+  		h3 {font-size: 1em; font-weight: 400; color: #4868ad; line-height: 1.5em; text-transform: capitalize;}
+  		p {color: #666; font-family: 'Lato', sans-serif; font-weight: 400; line-height: 1.7em;}
+
+  		#site-wrap { padding-bottom: 3em; }
+  		#header-wrap {
+		  background: #fff;
+		  padding: 20px;
+		  margin-bottom: 0;
+		  top: 0;
+		  position: static;
+		  border-bottom: 4px solid #e06858;
+		  box-shadow: 0 1px 4px rgba(0,0,0,.7);
+		  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.7);
+		  -moz-box-shadow: 0 1px 4px rgba(0,0,0,.7);
+		  z-index: 10;
+		}
+		#header-wrap:hover { border-bottom: 4px solid #5990c9; transition-duration: .5s; -webkit-transition: all .5s ease-in-out; -moz-transition: all .5s ease-in-out; -ms-transition: all .5s ease-in-out;-o-transition: all .5s ease-in-out;}
+		.contain-menu {width: 1000px; margin: 0 auto;padding: 50px;}
+		.menu-logo { width: 15%;float: left;display: block;margin-top: -18px;}
+		.menu-logo img {width: 70%}
+		.menu-links {float: right; margin: -20px; text-align: right; width: 85%;}
+		.menu-links span {font-size: 10px; color: #999; float: right; display: inline-block; padding-right: 3px; letter-spacing: 1px; margin-top: -7px;}
+		.menu-links li {font-size: 1em;}
+		.pure-menu-selected .pure-menu-link, .pure-menu-selected .pure-menu-link:visited, .pure-menu-link {
+		  color: #707f8e;
+		  font-size: 11px;
+		  text-transform: uppercase;
+		  letter-spacing: 1px;
+		  font-weight: 700;
+		  display: inline-grid;
+		}
+		#become-member {border:1px solid #5990c9; color: #5990c9; background: #fff; }
+		#become-member:hover, #become-member:active {color: #fff; background: #5990c9;}
+		.pure-menu-children {background-color: #fff;padding: 20px;}
+		#intro-banner {
+		  width: 100%;
+		  height: 350px;
+		  padding: 50px 0;
+		  background-color: #d5e3f0;
+		  text-align: center;
+		  background-image: url(../img/franklin-mountains.png);
+		  background-size: cover;
+		  background-position: middle;
+		  background-repeat: no-repeat;
+		}
+		.home-menu {
+		    padding: 0.5em;
+		    text-align: center;
+		    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+		}
+		.home-menu {
+		    background: #2d3e50;
+		}
+		.pure-menu.pure-menu-fixed {
+		    /* Fixed menus normally have a border at the bottom. */
+		    border-bottom: none;
+		    /* I need a higher z-index here because of the scroll-over effect. */
+		    z-index: 4;
+		}
+
+		.home-menu .pure-menu-heading {
+		    color: white;
+		    font-weight: 400;
+		    font-size: 120%;
+		}
+
+		.home-menu .pure-menu-selected a {
+		    color: white;
+		}
+
+		.home-menu a {
+		    color: #6FBEF3;
+		}
+		.home-menu li a:hover,
+		.home-menu li a:focus {
+		    background: none;
+		    border: none;
+		    color: #AECFE5;
+		}
+		.container {margin: 0 auto; padding: 30px; width: 1000px;  box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; clear: both;}
+		.left-content {float: left; width: 600px; }
+		.left-content h1 {font-size: 2em; margin: .67em 0; font-weight: 400; color: #444; line-height: 1.5em;}
+		.left-content  img {padding: 15px 5px;} .left-content img:first-child{padding-left: -5px;}
+		.right-content {float: right; width: 200px;}
+
+
+		.membership-banner {
+		  width: 100%;
+		  min-height: 250px;
+		  padding: 50px 0;
+		  background-color: #d5e3f0;
+		  text-align: center;
+		  font-size: 1em;
+		  line-height: 1.75em;
+		  color: #333;
+		  clear: both;
+		  background-size: cover;
+		  background-repeat: no-repeat;
+		}
+
+
+		#footer-wrap {
+		  background: #4868ad;
+		  height: 3em;
+		  margin-top: -3em;
+		  clear: both;
+		  padding-top: 15px;
+		  text-align: center;
+		  position: relative;
+		}
+		#footer-wrap p {color: #fff; font-size: .4em; letter-spacing: 4px;}
+
+		button {
+		  border: 2px solid #ccc;
+		  background: #fff;
+		  color: #666;
+		  line-height: 1.375;
+		  padding: 10px 15px;
+		  font-size: .9em;
+		  font-weight: 700;
+		  cursor: pointer;
+		  margin-bottom: 10px;
+		  margin-top: 10px;
+		  text-transform: uppercase;
+		  letter-spacing: .25px;
+		  width: 220px;
+		  transition-duration: .5s; -webkit-transition: all .5s ease-in-out; -moz-transition: all .5s ease-in-out; -ms-transition: all .5s ease-in-out;-o-transition: all .5s ease-in-out;
+		}
+		button:hover {border: 2px solid #666; background: #666; color: #fff;}
+
+		button.one { border: 2px solid #f35626; background: #fff; color: #f35626;}
+		button.one:hover { border: 2px solid #f35626; background: #f35626; color: #fff;}
+
+		button.two { border: 2px solid #4868ad; background: #fff; color: #4868ad;}
+		button.two:hover { border: 2px solid #4868ad; background: #4868ad; color: #fff;}
