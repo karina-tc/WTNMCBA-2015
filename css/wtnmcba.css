@@ -2,10 +2,42 @@
   		html, body, #container { height: 100%; }
   		body > #site-wrap { height: auto; min-height: 100%; }
 
+  		/* GENERAL TYPOGRAPHY */
+
   		h3 {font-size: 1em; font-weight: 400; color: #4868ad; line-height: 1.5em; text-transform: capitalize;}
   		p {color: #666; font-family: 'Lato', sans-serif; font-weight: 400; line-height: 1.7em;}
 
+  		/* BUTTON STYLES */
+
+  		button {
+		  border: 2px solid #ccc;
+		  background: #fff;
+		  color: #666;
+		  line-height: 1.375;
+		  padding: 10px 15px;
+		  font-size: .9em;
+		  font-weight: 700;
+		  cursor: pointer;
+		  margin-bottom: 10px;
+		  margin-top: 10px;
+		  text-transform: uppercase;
+		  letter-spacing: .25px;
+		  width: 220px;
+		  transition-duration: .5s; -webkit-transition: all .5s ease-in-out; -moz-transition: all .5s ease-in-out; -ms-transition: all .5s ease-in-out;-o-transition: all .5s ease-in-out;
+		}
+		button:hover {border: 2px solid #666; background: #666; color: #fff;}
+
+		button.one { border: 2px solid #f35626; background: #fff; color: #f35626;}
+		button.one:hover { border: 2px solid #f35626; background: #f35626; color: #fff;}
+
+		button.two { border: 2px solid #4868ad; background: #fff; color: #4868ad;}
+		button.two:hover { border: 2px solid #4868ad; background: #4868ad; color: #fff;}
+
+		/* WEB PAGE STYLES */
+
   		#site-wrap { padding-bottom: 3em; }
+
+  		/* NAVIGATION STYLES */
   		#header-wrap {
 		  background: #fff;
 		  padding: 20px;
@@ -36,6 +68,9 @@
 		#become-member {border:1px solid #5990c9; color: #5990c9; background: #fff; }
 		#become-member:hover, #become-member:active {color: #fff; background: #5990c9;}
 		.pure-menu-children {background-color: #fff;padding: 20px;}
+
+		/* HOME PAGE STYLES */
+
 		#intro-banner {
 		  width: 100%;
 		  height: 350px;
@@ -103,6 +138,8 @@
 		}
 
 
+		/* FOOTER STYLES */
+
 		#footer-wrap {
 		  background: #4868ad;
 		  height: 3em;
@@ -114,26 +151,132 @@
 		}
 		#footer-wrap p {color: #fff; font-size: .4em; letter-spacing: 4px;}
 
-		button {
-		  border: 2px solid #ccc;
-		  background: #fff;
-		  color: #666;
-		  line-height: 1.375;
-		  padding: 10px 15px;
-		  font-size: .9em;
-		  font-weight: 700;
-		  cursor: pointer;
-		  margin-bottom: 10px;
-		  margin-top: 10px;
-		  text-transform: uppercase;
-		  letter-spacing: .25px;
-		  width: 220px;
-		  transition-duration: .5s; -webkit-transition: all .5s ease-in-out; -moz-transition: all .5s ease-in-out; -ms-transition: all .5s ease-in-out;-o-transition: all .5s ease-in-out;
-		}
-		button:hover {border: 2px solid #666; background: #666; color: #fff;}
+		/* ====================
 
-		button.one { border: 2px solid #f35626; background: #fff; color: #f35626;}
-		button.one:hover { border: 2px solid #f35626; background: #f35626; color: #fff;}
+DEMO POPUP FORM STYLES
 
-		button.two { border: 2px solid #4868ad; background: #fff; color: #4868ad;}
-		button.two:hover { border: 2px solid #4868ad; background: #4868ad; color: #fff;}
+======================*/
+
+body.popup-active {
+  overflow: hidden;
+}
+
+.demo-popup {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 2000;
+}
+
+.demo-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(253, 253, 253, 0.9);
+  z-index: 2001;
+}
+
+.demo-popup-wrapper {
+  position: relative;
+  top: 50%;
+  max-width: 500px;
+  max-height: 85%;
+  margin: auto;
+  z-index: 2002;
+  transform: translateY(-50%);
+}
+@media only screen and (max-width: 600px) {
+  .demo-popup-wrapper {
+    width: 88% !important;
+    max-height: 85% !important;
+    top: 7%;
+    transform: none !important;
+  }
+}
+
+.demo-popup-close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 30px;
+  height: 30px;
+  background: #262938;
+  color: #fff;
+  border: none;
+}
+
+.demo-popup-content {
+  height: 100%;
+  min-height: 150px;
+  background-color: #3f424f;
+  color: #fff;
+  padding: 10px;
+}
+
+/* additional styling */
+.demo-popup-content {
+  text-align: center;
+}
+.demo-popup-content li {
+  text-align: left;
+}
+
+.demo-popup form {margin-bottom: -20px;}
+
+.demo-popup h1 {
+	font-family: "museo-sans"; 
+	font-style: normal; 
+	font-size: 14px; 
+	font-weight: 300; 
+	text-transform: uppercase;;
+	letter-spacing: 2px;
+	text-align: center;
+	color: #fff;
+}
+
+.demo-popup form {margin-left: 10px; margin-right: auto;}
+.demo-popup form input[type="email"], 
+.demo-popup form input[type="text"],
+.demo-popup form input[type="url"], 
+.demo-popup form select {
+	display: block;
+	color: #969aa5;
+	font-family: "museo-sans";
+	font-size: .9em;
+	padding: 15px 10px;
+	width: 230px;
+	border: 1px solid #efefef;
+}
+
+.demo-popup form select {
+	cursor: pointer;
+	background: url("../img/generic/arrow-select.png") #fff;
+	background-position: 95% 80%;
+	background-repeat: no-repeat;
+}
+
+.demo-popup form input[type="submit"] {
+	color: #fff;
+	background-color: #f37d59;
+	box-shadow: 0 5px 0 #ea6c46;
+	border: none;
+	display: inline-block;
+	font-weight: 500;
+	font-size: 16px;
+	float: left;
+	padding: 20px 40px;
+	text-align: center;
+	margin: 0;
+	width: 98%;
+	font-family: "museo-sans";
+	text-transform: uppercase;
+}
+
+

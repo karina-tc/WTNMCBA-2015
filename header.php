@@ -37,14 +37,14 @@
 	    <ul class="pure-menu-list menu-links">
 	    	<span>WELCOME TO THE WEST TEXAS NEW MEXICO CUSTOM BROKERS ASSOCIATION WEBSITE</span>
 	    	<br>
-	        <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
-	        <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Calendar</a></li>
-	        <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Members Directory</a></li>
+	        <li class="pure-menu-item pure-menu-selected"><a href="../WTNMCBA-2015/" class="pure-menu-link">Home</a></li>
+	        <li class="pure-menu-item pure-menu-selected"><a href="../WTNMCBA-2015/calendar.php" class="pure-menu-link">Calendar</a></li>
+	        <li class="pure-menu-item pure-menu-selected"><a href="../WTNMCBA-2015/members-directory.php" class="pure-menu-link">Members Directory</a></li>
 	        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
 	            <a href="#" id="menuLink1" class="pure-menu-link">Members Only</a>
 	            <ul class="pure-menu-children">
-	                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Login</a></li>
-	                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Become a Member</a></li>
+	                <li class="pure-menu-item"><a href="../WTNMCBA-2015/members-login.php" class="pure-menu-link">Login</a></li>
+	                <li class="pure-menu-item"><a href="../WTNMCBA-2015/member-registration.php" class="pure-menu-link">Become a Member</a></li>
 	            </ul>
 	        </li>
 	        <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Contact Us</a></li>
