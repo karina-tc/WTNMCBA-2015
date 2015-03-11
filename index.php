@@ -11,7 +11,7 @@
         <h1 style="color:#fff; font-weight:400; margin-top:-1%; letter-spacing:.1em; font-size:28px;">SERVING THE TRADE COMMUNITY</h1>
     </div>
 
-    <div class="container" style="margin-bottom:600px;">
+    <div class="container" style="margin-bottom:450px;">
       <div class="left-content">
         <h1>The <span style="color: #5990c9;">West Texas</span> <span style="color: #e06955;">New Mexico</span> Customs Broker Association  is a professional organization first established in 1965.</h1>
         <p>

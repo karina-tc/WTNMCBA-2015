@@ -48,6 +48,8 @@
   width: 600px;
   width: 100%;
   max-width: 600px;
+  margin-top: -80px;
+  
 }
 .form-label-left,
 .form-label-right {
