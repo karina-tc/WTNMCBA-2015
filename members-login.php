@@ -5,7 +5,7 @@
 ?>
   
 
-    <div style="width:30%;margin:100px auto;height:200px;">
+    <div style="width:30%;height:400px;margin:100px auto;">
       
         <?php include("includes/logmein.php"); ?>
       

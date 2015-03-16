@@ -1,9 +1,16 @@
 <script src="https://d2g9qbzl5h49rh.cloudfront.net/static/prototype.forms.js" type="text/javascript"></script>
-<script src="https://d2g9qbzl5h49rh.cloudfront.net/static/jotform.forms.js?3.2.6017" type="text/javascript"></script>
+<script src="https://d2g9qbzl5h49rh.cloudfront.net/static/jotform.forms.js?3.2.6081" type="text/javascript"></script>
 <script type="text/javascript">
+   JotForm.setConditions([{"action":[{"field":"21","visibility":"Show"}],"id":"1426463724226","index":"0","link":"Any","priority":"0","terms":[{"field":"19","operator":"equals","value":"Regular Member"}],"type":"field"}]);
    JotForm.init(function(){
       setTimeout(function() {
           $('input_4').hint('ex: myname@example.com');
+       }, 20);
+      setTimeout(function() {
+          $('input_13').hint('ex: myname@example.com');
+       }, 20);
+      setTimeout(function() {
+          $('input_17').hint('ex: myname@example.com');
        }, 20);
       productID = {"0":"input_7_1001"};
       paymentType = "subscription";
@@ -11,9 +18,9 @@
       JotForm.totalCounter({"input_7_1001":{"price":"400"}});
    });
 </script>
-<link href="https://d2g9qbzl5h49rh.cloudfront.net/static/formCss.css?3.2.6017" rel="stylesheet" type="text/css" />
-<link type="text/css" rel="stylesheet" href="https://d2g9qbzl5h49rh.cloudfront.net/css/styles/nova.css?3.2.6017" />
-<link type="text/css" media="print" rel="stylesheet" href="https://d2g9qbzl5h49rh.cloudfront.net/css/printForm.css?3.2.6017" />
+<link href="https://d2g9qbzl5h49rh.cloudfront.net/static/formCss.css?3.2.6081" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="https://d2g9qbzl5h49rh.cloudfront.net/css/styles/nova.css?3.2.6081" />
+<link type="text/css" media="print" rel="stylesheet" href="https://d2g9qbzl5h49rh.cloudfront.net/css/printForm.css?3.2.6081" />
 <style type="text/css">
     .form-label-left{
         width:150px !important;
@@ -48,8 +55,6 @@
   width: 600px;
   width: 100%;
   max-width: 600px;
-  margin-top: -80px;
-  
 }
 .form-label-left,
 .form-label-right {
@@ -266,7 +271,7 @@
 }
 /*
 &amp; when ( @buttonFontType = google ) {
-	@import (css) "@{buttonFontLink}";
+  @import (css) "@{buttonFontLink}";
 }
 */
 h2.form-header {
@@ -547,38 +552,25 @@ select {
     /* Injected CSS Code */
 </style>
 
-<link type="text/css" rel="stylesheet" href="https://d2g9qbzl5h49rh.cloudfront.net/css/responsive.css?3.2.6017" />
-<form class="jotform-form" action="https://submit.jotform.us/submit/50681142397154/" method="post" name="form_50681142397154" id="50681142397154" accept-charset="utf-8">
+<link type="text/css" rel="stylesheet" href="https://d2g9qbzl5h49rh.cloudfront.net/css/responsive.css?3.2.6081" />
+<form style="margin-top:-100px" class="jotform-form" action="https://submit.jotform.us/submit/50681142397154/" method="post" enctype="multipart/form-data" name="form_50681142397154" id="50681142397154" accept-charset="utf-8">
   <input type="hidden" name="formID" value="50681142397154" />
   <div class="form-all">
-    <ul class="form-section">
-      <li class="form-line" data-type="control_fullname" id="id_3">
-        <label class="form-label form-label-top form-label-auto" id="label_3" for="input_3"> Full Name </label>
-        <div id="cid_3" class="form-input-wide jf-required">
-          <span class="form-sub-label-container" style="vertical-align: top">
-            <input class="form-textbox" type="text" size="10" name="q3_fullName3[first]" id="first_3" />
-            <label class="form-sub-label" for="first_3" id="sublabel_first" style="min-height: 13px;"> First Name </label>
-          </span>
-          <span class="form-sub-label-container" style="vertical-align: top">
-            <input class="form-textbox" type="text" size="15" name="q3_fullName3[last]" id="last_3" />
-            <label class="form-sub-label" for="last_3" id="sublabel_last" style="min-height: 13px;"> Last Name </label>
-          </span>
-        </div>
-      </li>
-      <li class="form-line" data-type="control_email" id="id_4">
-        <label class="form-label form-label-top form-label-auto" id="label_4" for="input_4"> E-mail </label>
-        <div id="cid_4" class="form-input-wide jf-required">
-          <input type="email" class=" form-textbox validate[Email]" id="input_4" name="q4_email4" size="30" value="" />
+    <ul class="form-section page-section">
+      <li class="form-line" data-type="control_textbox" id="id_8">
+        <label class="form-label form-label-top form-label-auto" id="label_8" for="input_8"> Firm's Name </label>
+        <div id="cid_8" class="form-input-wide jf-required">
+          <input type="text" class=" form-textbox" data-type="input-textbox" id="input_8" name="q8_firmsName" size="42" value="" />
         </div>
       </li>
       <li class="form-line" data-type="control_address" id="id_5">
-        <label class="form-label form-label-top form-label-auto" id="label_5" for="input_5"> Address </label>
+        <label class="form-label form-label-top form-label-auto" id="label_5" for="input_5"> Firm's Address </label>
         <div id="cid_5" class="form-input-wide jf-required">
           <table summary="" undefined class="form-address-table" border="0" cellpadding="0" cellspacing="0">
             <tr>
               <td colspan="2">
                 <span class="form-sub-label-container" style="vertical-align: top">
-                  <input class="form-textbox form-address-line" type="text" name="q5_address5[addr_line1]" id="input_5_addr_line1" />
+                  <input class="form-textbox form-address-line" type="text" name="q5_firmsAddress[addr_line1]" id="input_5_addr_line1" />
                   <label class="form-sub-label" for="input_5_addr_line1" id="sublabel_5_addr_line1" style="min-height: 13px;"> Street Address </label>
                 </span>
               </td>
@@ -586,7 +578,7 @@ select {
             <tr>
               <td colspan="2">
                 <span class="form-sub-label-container" style="vertical-align: top">
-                  <input class="form-textbox form-address-line" type="text" name="q5_address5[addr_line2]" id="input_5_addr_line2" size="46" />
+                  <input class="form-textbox form-address-line" type="text" name="q5_firmsAddress[addr_line2]" id="input_5_addr_line2" size="46" />
                   <label class="form-sub-label" for="input_5_addr_line2" id="sublabel_5_addr_line2" style="min-height: 13px;"> Street Address Line 2 </label>
                 </span>
               </td>
@@ -594,13 +586,13 @@ select {
             <tr>
               <td width="50%">
                 <span class="form-sub-label-container" style="vertical-align: top">
-                  <input class="form-textbox form-address-city" type="text" name="q5_address5[city]" id="input_5_city" size="21" />
+                  <input class="form-textbox form-address-city" type="text" name="q5_firmsAddress[city]" id="input_5_city" size="21" />
                   <label class="form-sub-label" for="input_5_city" id="sublabel_5_city" style="min-height: 13px;"> City </label>
                 </span>
               </td>
               <td>
                 <span class="form-sub-label-container" style="vertical-align: top">
-                  <input class="form-textbox form-address-state" type="text" name="q5_address5[state]" id="input_5_state" size="22" />
+                  <input class="form-textbox form-address-state" type="text" name="q5_firmsAddress[state]" id="input_5_state" size="22" />
                   <label class="form-sub-label" for="input_5_state" id="sublabel_5_state" style="min-height: 13px;"> State / Province </label>
                 </span>
               </td>
@@ -608,13 +600,13 @@ select {
             <tr>
               <td width="50%" function zip(){var iterator=Prototype.K,args=$A(arguments);if(Object.isFunction(args.last())) iterator=args.pop();var collections=[this].concat(args).map($A);return this.map(function(value,index){return iterator(collections.pluck(index));});}>
                 <span class="form-sub-label-container" style="vertical-align: top">
-                  <input class="form-textbox form-address-postal" type="text" name="q5_address5[postal]" id="input_5_postal" size="10" />
+                  <input class="form-textbox form-address-postal" type="text" name="q5_firmsAddress[postal]" id="input_5_postal" size="10" />
                   <label class="form-sub-label" for="input_5_postal" id="sublabel_5_postal" style="min-height: 13px;"> Postal / Zip Code </label>
                 </span>
               </td>
               <td>
                 <span class="form-sub-label-container" style="vertical-align: top">
-                  <select class="form-dropdown form-address-country" defaultcountry="" name="q5_address5[country]" id="input_5_country">
+                  <select class="form-dropdown form-address-country" defaultcountry="" name="q5_firmsAddress[country]" id="input_5_country">
                     <option value="" selected> Please Select </option>
                     <option value="United States"> United States </option>
                     <option value="Afghanistan"> Afghanistan </option>
@@ -868,20 +860,158 @@ select {
           </table>
         </div>
       </li>
+      <li class="form-line" data-type="control_textbox" id="id_9">
+        <label class="form-label form-label-top form-label-auto" id="label_9" for="input_9"> Name of Chief Executive </label>
+        <div id="cid_9" class="form-input-wide jf-required">
+          <input type="text" class=" form-textbox" data-type="input-textbox" id="input_9" name="q9_nameOf" size="42" value="" />
+        </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_10">
+        <label class="form-label form-label-top form-label-auto" id="label_10" for="input_10"> Chief Executive's title </label>
+        <div id="cid_10" class="form-input-wide jf-required">
+          <input type="text" class=" form-textbox" data-type="input-textbox" id="input_10" name="q10_chiefExecutives10" size="42" value="" />
+        </div>
+      </li>
+      <li class="form-line" data-type="control_email" id="id_4">
+        <label class="form-label form-label-top form-label-auto" id="label_4" for="input_4"> Chief Executive's Email </label>
+        <div id="cid_4" class="form-input-wide jf-required">
+          <input type="email" class=" form-textbox validate[Email]" id="input_4" name="q4_chiefExecutives" size="42" value="" />
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_11">
+        <div id="cid_11" class="form-input-wide">
+          <div id="text_11" class="form-html">
+            <p>PRIMARY CONTACT INFORMATION</p>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_12">
+        <label class="form-label form-label-top form-label-auto" id="label_12" for="input_12"> TITLE </label>
+        <div id="cid_12" class="form-input-wide jf-required">
+          <input type="text" class=" form-textbox" data-type="input-textbox" id="input_12" name="q12_title" size="42" value="" />
+        </div>
+      </li>
       <li class="form-line" data-type="control_phone" id="id_6">
-        <label class="form-label form-label-top form-label-auto" id="label_6" for="input_6"> Phone Number </label>
+        <label class="form-label form-label-top form-label-auto" id="label_6" for="input_6"> DIRECT Phone Number </label>
         <div id="cid_6" class="form-input-wide jf-required">
           <span class="form-sub-label-container" style="vertical-align: top">
-            <input class="form-textbox" type="tel" name="q6_phoneNumber6[area]" id="input_6_area" size="3">
+            <input class="form-textbox" type="tel" name="q6_directPhone[area]" id="input_6_area" size="3">
             <span class="phone-separate">
               &nbsp;-
             </span>
             <label class="form-sub-label" for="input_6_area" id="sublabel_area" style="min-height: 13px;"> Area Code </label>
           </span>
           <span class="form-sub-label-container" style="vertical-align: top">
-            <input class="form-textbox" type="tel" name="q6_phoneNumber6[phone]" id="input_6_phone" size="8">
+            <input class="form-textbox" type="tel" name="q6_directPhone[phone]" id="input_6_phone" size="8">
             <label class="form-sub-label" for="input_6_phone" id="sublabel_phone" style="min-height: 13px;"> Phone Number </label>
           </span>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_email" id="id_13">
+        <label class="form-label form-label-top form-label-auto" id="label_13" for="input_13"> E-mail </label>
+        <div id="cid_13" class="form-input-wide jf-required">
+          <input type="email" class=" form-textbox validate[Email]" id="input_13" name="q13_email13" size="42" value="" />
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_14">
+        <div id="cid_14" class="form-input-wide">
+          <div id="text_14" class="form-html">
+            <p>SECONDARY CONTACT INFORMATION</p>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_15">
+        <label class="form-label form-label-top form-label-auto" id="label_15" for="input_15"> TITLE </label>
+        <div id="cid_15" class="form-input-wide jf-required">
+          <input type="text" class=" form-textbox" data-type="input-textbox" id="input_15" name="q15_title15" size="42" value="" />
+        </div>
+      </li>
+      <li class="form-line" data-type="control_phone" id="id_16">
+        <label class="form-label form-label-top form-label-auto" id="label_16" for="input_16"> DIRECT Phone Number </label>
+        <div id="cid_16" class="form-input-wide jf-required">
+          <span class="form-sub-label-container" style="vertical-align: top">
+            <input class="form-textbox" type="tel" name="q16_directPhone16[area]" id="input_16_area" size="3">
+            <span class="phone-separate">
+              &nbsp;-
+            </span>
+            <label class="form-sub-label" for="input_16_area" id="sublabel_area" style="min-height: 13px;"> Area Code </label>
+          </span>
+          <span class="form-sub-label-container" style="vertical-align: top">
+            <input class="form-textbox" type="tel" name="q16_directPhone16[phone]" id="input_16_phone" size="8">
+            <label class="form-sub-label" for="input_16_phone" id="sublabel_phone" style="min-height: 13px;"> Phone Number </label>
+          </span>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_email" id="id_17">
+        <label class="form-label form-label-top form-label-auto" id="label_17" for="input_17"> E-mail </label>
+        <div id="cid_17" class="form-input-wide jf-required">
+          <input type="email" class=" form-textbox validate[Email]" id="input_17" name="q17_email17" size="42" value="" />
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_18">
+        <div id="cid_18" class="form-input-wide">
+          <div id="text_18" class="form-html">
+            <p><strong>Requesting Membership in the West Texas New Mexico Custom Brokers Association Inc, on Behalf of Said Firm above as a:</strong></p>
+            <p><span style="font-size:small;"><strong>REGULAR MEMBER: </strong>A company engaged for hire by the public to transact Customs business on their behalf.</span></p>
+            <p><span style="font-size:small;"><strong>ASSOCIATE MEMBER:</strong> A company that employs an in-house Licensed Custom Broker for the Distric/Port of El Paso, Texas.</span></p>
+            <p><span style="font-size:small;"><strong>AFFILIATE MEMBER:</strong> A company that engages in forwarding, transportation and the like, but not transacting as a Customs Broker for hire or having a Licensed Customs Broker on Staff.</span></p>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_radio" id="id_19">
+        <label class="form-label form-label-top" id="label_19" for="input_19"> PLACE REQUEST AS </label>
+        <div id="cid_19" class="form-input-wide jf-required">
+          <div class="form-single-column">
+            <span class="form-radio-item" style="clear:left;">
+              <input type="radio" class="form-radio" id="input_19_0" name="q19_placeRequest" value="Regular Member" />
+              <label for="input_19_0"> Regular Member </label>
+            </span>
+            <span class="clearfix">
+            </span>
+            <span class="form-radio-item" style="clear:left;">
+              <input type="radio" class="form-radio" id="input_19_1" name="q19_placeRequest" value="Associate Member" />
+              <label for="input_19_1"> Associate Member </label>
+            </span>
+            <span class="clearfix">
+            </span>
+            <span class="form-radio-item" style="clear:left;">
+              <input type="radio" class="form-radio" id="input_19_2" name="q19_placeRequest" value="Affiliate Member" />
+              <label for="input_19_2"> Affiliate Member </label>
+            </span>
+            <span class="clearfix">
+            </span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_20">
+        <label class="form-label form-label-top form-label-auto" id="label_20" for="input_20"> CUSTOM BROKERS LICENSE NUMBER </label>
+        <div id="cid_20" class="form-input-wide jf-required">
+          <input type="text" class=" form-textbox" data-type="input-textbox" id="input_20" name="q20_customBrokers" size="42" value="" />
+        </div>
+      </li>
+      <li class="form-line" data-type="control_fileupload" id="id_21">
+        <label class="form-label form-label-top form-label-auto" id="label_21" for="input_21"> Copy of License is needed </label>
+        <div id="cid_21" class="form-input-wide jf-required">
+          <input class="form-upload" type="file" id="input_21" name="q21_copyOf" file-accept="pdf, doc, docx, xls, xlsx, csv, txt, rtf, html, zip, mp3, wma, mpg, flv, avi, jpg, jpeg, png, gif" file-maxsize="1024" file-minsize="0" file-limit="0" />
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_22">
+        <div id="cid_22" class="form-input-wide">
+          <div id="text_22" class="form-html">
+            <p>I agree to observe an uphoald the bylaws and Code of Ethics of the Association, once elected as member.</p>
+          </div>
+        </div>
+      </li>
+      <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_23">
+        <label class="form-label form-label-top" id="label_23" for="input_23"> Your Full Name </label>
+        <div id="cid_23" class="form-input-wide jf-required">
+          <input type="text" class=" form-textbox" data-type="input-textbox" id="input_23" name="q23_yourFull" size="42" value="" />
+        </div>
+      </li>
+      <li class="form-line form-line-column form-col-2" data-type="control_textbox" id="id_24">
+        <label class="form-label form-label-top" id="label_24" for="input_24"> Your Title </label>
+        <div id="cid_24" class="form-input-wide jf-required">
+          <input type="text" class=" form-textbox" data-type="input-textbox" id="input_24" name="q24_yourTitle" size="42" value="" />
         </div>
       </li>
       <li class="form-line jf-required" data-type="control_paypalpro" id="id_7">
@@ -1316,12 +1446,17 @@ select {
       </li>
       <li class="form-line" data-type="control_button" id="id_2">
         <div id="cid_2" class="form-input-wide">
-          <div style="margin-left:156px" class="form-buttons-wrapper">
+          <div style="text-align:left" class="form-buttons-wrapper">
             <div style="float:left; margin-top: 8px;">
               <input style="display:none; outline:none;" class="paypal-button" type="image" src="https://www.paypal.com/en_US/i/btn/btn_dg_pay_w_paypal.gif">
             </div>
             <button id="input_2" type="submit" class="form-submit-button">
               Submit
+            </button>
+            &nbsp;
+            <button id="input_print_2" style="margin-left:25px;" class="form-submit-print" type="button">
+              <img src="https://d2g9qbzl5h49rh.cloudfront.net/images/printer.png" align="absmiddle" />
+              Print Form
             </button>
           </div>
         </div>

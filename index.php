@@ -25,9 +25,9 @@
       <div class="right-content" style="padding-top:20px;text-align:right;">
         <img src="img/logo-left.png" draggable="false"><img src="img/logo-right.png" draggable="false">
         <br>
-        <button class="one">events calendar</button><br>
-        <button class="two">our members</button><br>
-        <button>join us today</button><br>
+        <a href="../WTNMCBA-2015/events-calendar.php"><button class="one">events calendar</button></a><br>
+        <a href="../WTNMCBA-2015/members-directory.php"><button class="two">our members</button></a><br>
+        <a href="../WTNMCBA-2015/member-registration.php"><button>join us today</button></a><br>
       </div>
     </div>
 

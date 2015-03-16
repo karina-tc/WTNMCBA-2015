@@ -1,72 +1,339 @@
+<style type="text/css">
+/*******************************Calendar Top Navigation*********************************/
+div#calendar{
+  margin:0px;
+  padding:0px;
+  width: 602px;
+  font-family:'Lato', Helvetica, sans-serif;
+}
+ 
+div#calendar div.box{
+    position:relative;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:40px;
+    background-color:   #4868ad ;      
+}
+ 
+div#calendar div.header{
+    line-height:40px;  
+    vertical-align:middle;
+    position:absolute;
+    left:11px;
+    top:0px;
+    width:582px;
+    height:40px;   
+    text-align:center;
+}
+ 
+div#calendar div.header a.prev,div#calendar div.header a.next{ 
+    position:absolute;
+    top:0px;   
+    height: 17px;
+    display:block;
+    cursor:pointer;
+    text-decoration:none;
+    color:#FFF;
+}
+ 
+div#calendar div.header span.title{
+    color:#FFF;
+    font-size:18px;
+}
+ 
+ 
+div#calendar div.header a.prev{
+    left:0px;
+}
+ 
+div#calendar div.header a.next{
+    right:0px;
+}
+ 
+ 
+ 
+ 
+/*******************************Calendar Content Cells*********************************/
+div#calendar div.box-content{
+    border:1px solid #fff ;
+    border-top:none;
+}
+ 
+ 
+ 
+div#calendar ul.label{
+    float:left;
+    margin: 0px;
+    padding: 0px;
+    margin-top:5px;
+    margin-left: 5px;
+}
+ 
+div#calendar ul.label li{
+    margin:0px;
+    padding:0px;
+    margin-right:5px;  
+    float:left;
+    list-style-type:none;
+    width:80px;
+    height:40px;
+    line-height:40px;
+    vertical-align:middle;
+    text-align:center;
+    color:#000;
+    font-size: 15px;
+    background-color: transparent;
+}
+ 
+ 
+div#calendar ul.dates{
+    float:left;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+ 
+/** overall width = width+padding-right**/
+div#calendar ul.dates li{
+    margin:0px;
+    padding:0px;
+    margin-right:5px;
+    margin-top: 5px;
+    line-height:80px;
+    vertical-align:middle;
+    float:left;
+    list-style-type:none;
+    width:80px;
+    height:80px;
+    font-size:25px;
+    background-color: #f7f8f8;
+    color:#000;
+    text-align:center; 
+}
+
+div#calendar ul.dates li:hover {background-color: #4868ad; color: #fff;}
+
+:focus{
+    outline:none;
+}
+ 
+div.clear{
+    clear:both;
+}     
+</style>
+
+
 <?php
-  $pageTitle = "WTNMCBA | Calendar of Events";
-  $metaDescription = "";
-  include("header.php");
-?>
-    
-
-
-    <div id="intro-banner" class="pure-u-1">
-        <img src="img/hp-banner-logo.png">
-        <h1 style="color:#fff; font-weight:400; margin-top:-1%; letter-spacing:.1em; font-size:28px;">SERVING THE TRADE COMMUNITY</h1>
-    </div>
-
-    <div class="container" style="margin-bottom:600px;">
-      <div class="left-content">
-        <h1>The <span style="color: #5990c9;">West Texas</span> <span style="color: #e06955;">New Mexico</span> Customs Broker Association  is a professional organization first established in 1965.</h1>
-        <p>
-        Our mission is to provide support for the import/export community in El Paso and the New Mexico Area. We assist our members and the businesses in the community by using  the leverage of our group to address and resolve issues affecting the mechanics and policy of international trade.
-      </p>
-        <img src="img/intro-01.png" draggable="false">
-        <img src="img/intro-02.png" draggable="false">
-        <img src="img/intro-03.png" draggable="false">
-        <img src="img/intro-04.png" draggable="false">
-      </div>
-      <div class="right-content" style="padding-top:20px;text-align:right;">
-        <img src="img/logo-left.png" draggable="false"><img src="img/logo-right.png" draggable="false">
-        <br>
-        <button class="one">events calendar</button><br>
-        <button class="two">our members</button><br>
-        <button>join us today</button><br>
-      </div>
-    </div>
-
-    <div class="membership-banner">
-      <div>
-        <h3>Membership with WTNMCBA provides you with the following benefits:</h3>
-        <p>Access to leased mailboxes and cubicles at the commercial bridges<br>
-        Networking with professionals in the import/export community<br>
-        Training and professional development opportunities<br>
-        Full voting rights and participation in committees<br>
-        Access to the knowledge and influence of our members<br>
-        Listing in the members directory</p>
-      </div>
-    </div>
-
-        
-
-
-
-
-<!-- SMOOTH SCROLL -->
-<script type="text/javascript">
-$(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top -10
-        }, 900);
-        return false;
-      }
+class Calendar {  
+     
+    /**
+     * Constructor
+     */
+    public function __construct(){     
+        $this->naviHref = htmlentities($_SERVER['PHP_SELF']);
     }
-  });
-});
-</script>
-
-
-
-      
-<?php include("footer.php"); ?>
+     
+    /********************* PROPERTY ********************/  
+    private $dayLabels = array("Mon","Tue","Wed","Thu","Fri","Sat","Sun");
+     
+    private $currentYear=0;
+     
+    private $currentMonth=0;
+     
+    private $currentDay=0;
+     
+    private $currentDate=null;
+     
+    private $daysInMonth=0;
+     
+    private $naviHref= null;
+     
+    /********************* PUBLIC **********************/  
+        
+    /**
+    * print out the calendar
+    */
+    public function show() {
+        $year  == null;
+         
+        $month == null;
+         
+        if(null==$year&&isset($_GET['year'])){
+ 
+            $year = $_GET['year'];
+         
+        }else if(null==$year){
+ 
+            $year = date("Y",time());  
+         
+        }          
+         
+        if(null==$month&&isset($_GET['month'])){
+ 
+            $month = $_GET['month'];
+         
+        }else if(null==$month){
+ 
+            $month = date("m",time());
+         
+        }                  
+         
+        $this->currentYear=$year;
+         
+        $this->currentMonth=$month;
+         
+        $this->daysInMonth=$this->_daysInMonth($month,$year);  
+         
+        $content='<div id="calendar">'.
+                        '<div class="box">'.
+                        $this->_createNavi().
+                        '</div>'.
+                        '<div class="box-content">'.
+                                '<ul class="label">'.$this->_createLabels().'</ul>';   
+                                $content.='<div class="clear"></div>';     
+                                $content.='<ul class="dates">';    
+                                 
+                                $weeksInMonth = $this->_weeksInMonth($month,$year);
+                                // Create weeks in a month
+                                for( $i=0; $i<$weeksInMonth; $i++ ){
+                                     
+                                    //Create days in a week
+                                    for($j=1;$j<=7;$j++){
+                                        $content.=$this->_showDay($i*7+$j);
+                                    }
+                                }
+                                 
+                                $content.='</ul>';
+                                 
+                                $content.='<div class="clear"></div>';     
+             
+                        $content.='</div>';
+                 
+        $content.='</div>';
+        return $content;   
+    }
+     
+    /********************* PRIVATE **********************/ 
+    /**
+    * create the li element for ul
+    */
+    private function _showDay($cellNumber){
+         
+        if($this->currentDay==0){
+             
+            $firstDayOfTheWeek = date('N',strtotime($this->currentYear.'-'.$this->currentMonth.'-01'));
+                     
+            if(intval($cellNumber) == intval($firstDayOfTheWeek)){
+                 
+                $this->currentDay=1;
+                 
+            }
+        }
+         
+        if( ($this->currentDay!=0)&&($this->currentDay<=$this->daysInMonth) ){
+             
+            $this->currentDate = date('Y-m-d',strtotime($this->currentYear.'-'.$this->currentMonth.'-'.($this->currentDay)));
+             
+            $cellContent = $this->currentDay;
+             
+            $this->currentDay++;   
+             
+        }else{
+             
+            $this->currentDate =null;
+ 
+            $cellContent=null;
+        }
+             
+         
+        return '<li id="li-'.$this->currentDate.'" class="'.($cellNumber%7==1?' start ':($cellNumber%7==0?' end ':' ')).
+                ($cellContent==null?'mask':'').'">'.$cellContent.'</li>';
+    }
+     
+    /**
+    * create navigation
+    */
+    private function _createNavi(){
+         
+        $nextMonth = $this->currentMonth==12?1:intval($this->currentMonth)+1;
+         
+        $nextYear = $this->currentMonth==12?intval($this->currentYear)+1:$this->currentYear;
+         
+        $preMonth = $this->currentMonth==1?12:intval($this->currentMonth)-1;
+         
+        $preYear = $this->currentMonth==1?intval($this->currentYear)-1:$this->currentYear;
+         
+        return
+            '<div class="header">'.
+                '<a class="prev" href="'.$this->naviHref.'?month='.sprintf('%02d',$preMonth).'&year='.$preYear.'"> <&nbsp;<small>PREV</small> </a>'.
+                    '<span class="title">'.date('Y M',strtotime($this->currentYear.'-'.$this->currentMonth.'-1')).'</span>'.
+                '<a class="next" href="'.$this->naviHref.'?month='.sprintf("%02d", $nextMonth).'&year='.$nextYear.'"> <small>NEXT</small>&nbsp;> </a>'.
+            '</div>';
+    }
+         
+    /**
+    * create calendar week labels
+    */
+    private function _createLabels(){  
+                 
+        $content='';
+         
+        foreach($this->dayLabels as $index=>$label){
+             
+            $content.='<li class="'.($label==6?'end title':'start title').' title">'.$label.'</li>';
+ 
+        }
+         
+        return $content;
+    }
+     
+     
+     
+    /**
+    * calculate number of weeks in a particular month
+    */
+    private function _weeksInMonth($month=null,$year=null){
+         
+        if( null==($year) ) {
+            $year =  date("Y",time()); 
+        }
+         
+        if(null==($month)) {
+            $month = date("m",time());
+        }
+         
+        // find number of days in this month
+        $daysInMonths = $this->_daysInMonth($month,$year);
+         
+        $numOfweeks = ($daysInMonths%7==0?0:1) + intval($daysInMonths/7);
+         
+        $monthEndingDay= date('N',strtotime($year.'-'.$month.'-'.$daysInMonths));
+         
+        $monthStartDay = date('N',strtotime($year.'-'.$month.'-01'));
+         
+        if($monthEndingDay<$monthStartDay){
+             
+            $numOfweeks++;
+         
+        }
+         
+        return $numOfweeks;
+    }
+ 
+    /**
+    * calculate number of days in a particular month
+    */
+    private function _daysInMonth($month=null,$year=null){
+         
+        if(null==($year))
+            $year =  date("Y",time()); 
+ 
+        if(null==($month))
+            $month = date("m",time());
+             
+        return date('t',strtotime($year.'-'.$month.'-01'));
+    }
+     
+}
